@@ -211,7 +211,7 @@
 	(ros::spin-once) ; for call callback function
 	(when (boundp '*irtviewer*) (send *irtviewer* :draw-objects))
 ;	(send-all c :draw-on :flush t)
-	(x::window-main-one)
+;	(x::window-main-one)
 	(ros::sleep)
 	(when (eq count 0) (hang-pen))
 ;	(when c
