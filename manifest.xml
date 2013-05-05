@@ -1,0 +1,16 @@
+<package>
+  <description brief="pr2_kakizome">
+
+     pr2_kakizome
+
+  </description>
+  <author>furushchev</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pr2_kakizome</url>
+  <depend package="std_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="geometry_msgs"/>
+</package>
+
+
