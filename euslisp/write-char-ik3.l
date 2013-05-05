@@ -126,7 +126,7 @@
 									 (send *pr2* :torso_lift_link))
 					:debug-view nil))
 		(send *pr2* :head :look-at (send *pr2* :rarm :end-coords :worldpos))
-		(when *irtviewer* (send *irtviewer* :draw-objects))
+		(when (boundp '*irtviewer*) (send *irtviewer* :draw-objects))
 		(when (boundp '*ri*)
 		  (if debug
 			  (progn (print (list (send *pr2* :rarm :end-coords :worldpos) ik-ret))
@@ -209,7 +209,7 @@
   (while (ros::ok)
 ;	(setq c (tf-object-update))
 	(ros::spin-once) ; for call callback function
-	(send *irtviewer* :draw-objects)
+	(when (boundp '*irtviewer*) (send *irtviewer* :draw-objects))
 ;	(send-all c :draw-on :flush t)
 	(x::window-main-one)
 	(ros::sleep)
