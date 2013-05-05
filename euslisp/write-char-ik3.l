@@ -3,7 +3,7 @@
 ;;Initialization
 (ros::roseus-add-msgs "image_view2")
 (ros::roseus-add-msgs "posedetection_msgs")
-(ros::roseus-add-msgs "jsk_gui_msgs")
+(ros::roseus-add-msgs "pr2_kakizome")
 (load "package://pr2eus/pr2.l")
 (load "package://pr2eus/pr2-interface.l")
 (load "jsk-stroke.l")
@@ -200,7 +200,7 @@
 )
 
 ;;Subscribe ROS CANVAS touch point cloud
-(ros::subscribe "touch_pos_cloud" jsk_gui_msgs::PointCloudList #'get-touch-pos-cloud-msg)
+(ros::subscribe "touch_pos_cloud" pr2_kakizome::PointCloudList #'get-touch-pos-cloud-msg)
 
 ;;main loop
 
