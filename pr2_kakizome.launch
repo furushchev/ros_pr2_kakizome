@@ -1,0 +1,8 @@
+<launch>
+  <env name="PATH" value="$(env PATH):$(find roseus)/bin" />
+  <node name="pr2_kakizomee"
+	pkg="pr2_kakizome"
+	type="write-char-ik3.l"
+	output="screen"/>
+</launch>
+
