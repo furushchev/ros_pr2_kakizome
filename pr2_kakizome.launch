@@ -1,6 +1,15 @@
 <launch>
   <env name="PATH" value="$(env PATH):$(find roseus)/bin" />
+<<<<<<< HEAD
   <node name="pr2_kakizome" pkg="roseus" type="roseus"
         args="'(load &quot;package://pr2_kakizome/euslisp/write-char-ik3.l&quot;)'"
         output="screen" />
 </launch>
+=======
+  <node name="pr2_kakizomee"
+	pkg="pr2_kakizome"
+	type="write-char-ik3.l"
+	output="screen"/>
+</launch>
+
+>>>>>>> 4654d64e28781ac531dcf8076258a08e77f5d815
